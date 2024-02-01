@@ -3,7 +3,10 @@ Converts midi keyboard inputs into possible chord names
 
 How to:
 To launch you must have rust and cargo installed.
-Start with `cargo run` or after `cargo build --release` and execute `target/release/midi2chord`
+Start with `cargo run`
+
+Or after `cargo build --release` and execute `target/release/midi2chord`
+
 Select your midi keyboard and that's it, it will give you a list of possible chords
 
 
@@ -18,3 +21,6 @@ sudo apt install pkg-config
 ```
 ## Windows
 Depends on WinMM
+
+## Additional notes
+I'm still a beginner with rust, I know it's awfully written
