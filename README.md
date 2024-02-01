@@ -18,6 +18,13 @@ Depends on ALSA
 sudo apt install alsa
 sudo apt install alsa-utils
 sudo apt install pkg-config
+
+git clone https://github.com/UnderScroll/midi2chord.git
+cd /midi2chord
+
+cargo build --release
+cd target/release/
+./midi2chord
 ```
 ## Windows
 Depends on WinMM
