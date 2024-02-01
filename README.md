@@ -68,5 +68,7 @@ or
 cargo run
 ```
 
+You can also directly download the executable
+
 ## Additional notes
 I'm still a beginner with rust, I know it's awfully written
