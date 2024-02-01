@@ -18,7 +18,14 @@ fn main() {
             "reconnect" => {
                 _midi_keyboard = MidiKeyboard::new();
             }
-            _ => println!("Unknown command"),
+            "help" => {
+                println!(
+                    "Commands:
+                \n\texit : exits the program
+                \n\treconnect : Reconnects the midi keyboard, you can use it to change inputs"
+                )
+            }
+            _ => println!("Unknown command, type help to get available commands"),
         }
     }
 }
