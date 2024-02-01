@@ -1,7 +1,5 @@
 use std::fmt;
 
-use rand::Rng;
-
 #[derive(Copy, Clone, PartialEq)]
 pub enum Name {
     A,
@@ -68,41 +66,6 @@ impl Note {
             name: name,
             accidental: accidental,
             octave: octave,
-        }
-    }
-
-    pub fn new_random() -> Note {
-        let mut rand: u8;
-
-        rand = rand::thread_rng().gen_range(0..9);
-        let rand_octave = rand;
-
-        rand = rand::thread_rng().gen_range(0..6);
-        let rand_name: Name;
-        match rand {
-            0 => rand_name = Name::A,
-            1 => rand_name = Name::B,
-            2 => rand_name = Name::C,
-            3 => rand_name = Name::D,
-            4 => rand_name = Name::E,
-            5 => rand_name = Name::F,
-            6 => rand_name = Name::G,
-            _ => panic!("Somehow generated a number >6 for rand_name"),
-        }
-
-        rand = rand::thread_rng().gen_range(0..2);
-        let rand_accidental: Accidental;
-        match rand {
-            0 => rand_accidental = Accidental::Flat,
-            1 => rand_accidental = Accidental::Natural,
-            2 => rand_accidental = Accidental::Sharp,
-            _ => panic!("Somehow generated a number >2 for rand_accidental"),
-        }
-
-        Note {
-            name: rand_name,
-            accidental: rand_accidental,
-            octave: rand_octave,
         }
     }
 

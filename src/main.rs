@@ -3,11 +3,10 @@ mod midi;
 mod note;
 
 use midi::MidiKeyboard;
-use note::Note;
 use std::{error::Error, io::stdin};
 
 fn main() {
-    let mut midi_keyboard = MidiKeyboard::new();
+    let mut _midi_keyboard = MidiKeyboard::new();
 
     loop {
         let mut user_cmd = String::new();
@@ -17,7 +16,7 @@ fn main() {
         match user_cmd.trim_end() {
             "exit" => break,
             "reconnect" => {
-                midi_keyboard = MidiKeyboard::new();
+                _midi_keyboard = MidiKeyboard::new();
             }
             _ => println!("Unknown command"),
         }

@@ -352,7 +352,7 @@ pub fn to_chord_root(notes: &Vec<Note>, root: &Note) -> Option<(String, u32)> {
     }
 
     //Return
-    let mut chord_name = String::new();
+    let chord_name;
     if interval_bitmap != 0 {
         return None;
     }

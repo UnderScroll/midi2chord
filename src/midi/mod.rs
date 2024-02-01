@@ -103,7 +103,6 @@ impl MidiKeyboard {
             Event::ChannelPressure => (), //println!("[INFO] Unhandeled message (Channel Pressure)"),
             Event::PitchBendChange => (), //println!("[INFO] Unhandeled message (Pitch Bend Change)"),
             Event::SystemMessage => (),   //println!("[INFO] Unhandeled message (System message)"),
-            _ => eprintln!("[ERROR] Unknown message type"),
         }
     }
 
@@ -143,13 +142,6 @@ impl MidiKeyboard {
         }
 
         if notes.len() > 0 {
-            let binding = self.to_notes();
-            let root = binding.get(0);
-            let root = match root {
-                Some((note, _)) => note,
-                None => panic!("Unknown note"),
-            };
-
             let chords = chord::to_chord(notes);
             if chords.len() > 0 {
                 print!("Chords: ");
