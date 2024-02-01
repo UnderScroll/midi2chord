@@ -1,13 +1,9 @@
 # midi2chord
 Converts midi keyboard inputs into possible chord names
 
-How to:
-To launch you must have rust and cargo installed.
-Start with `cargo run`
-
-Or after `cargo build --release` and execute `target/release/midi2chord`
-
-Select your midi keyboard and that's it, it will give you a list of possible chords
+Launch the program
+Select your midi keyboard (it will be automatically selected if there is just one)
+And that's it!
 
 Output exemple:
 ```
