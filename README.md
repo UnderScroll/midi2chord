@@ -1,9 +1,16 @@
 # midi2chord
+
+---
+
 Converts midi keyboard inputs into possible chord names
 
 Launch the program
+
 Select your midi keyboard (it will be automatically selected if there is just one)
+
 And that's it!
+
+---
 
 Output exemple:
 ```
@@ -15,8 +22,11 @@ Chords:
         Emin(sus#4)(♭13)/C [24]
 ```
 First there is the chord name, then the chord weight in between brakets
-The wieght indicate how "complexe" the chord is
+
+The weight indicate how "complexe" the chord is
+
 All chord names should be valid (even though some can be a bit weird)
+
 6th chords aren't implemented
 
 ## Linux - Ubunto 23.10 x86_64
